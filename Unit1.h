@@ -7,10 +7,14 @@
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.Forms.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Imaging.jpeg.hpp>
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
 {
 __published:	// IDE-managed Components
+	TImage *background_image1;
+	TImage *login_template;
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);
