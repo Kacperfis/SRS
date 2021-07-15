@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2021-07-15 09:35:16.978,=C:\Users\Kacper\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2021-07-15 09:35:17.288,=C:\Users\Kacper\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2021-07-15 09:41:40.362,D:\PROGRAMOWAŃSKO\Register_project\Unit1.h=C:\Users\Kacper\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>2021-07-15 09:41:40.362,D:\PROGRAMOWAŃSKO\Register_project\Unit1.dfm=C:\Users\Kacper\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021-07-15 09:41:40.362,D:\PROGRAMOWAŃSKO\Register_project\Unit1.cpp=C:\Users\Kacper\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2021-07-15 09:41:41.893,D:\PROGRAMOWAŃSKO\Register_project\Project1PCH1.h=C:\Users\Kacper\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2021-07-15 09:41:43.153,D:\PROGRAMOWAŃSKO\Register_project\Project1.cbproj=C:\Users\Kacper\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>
