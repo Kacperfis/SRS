@@ -12,9 +12,32 @@
 #pragma package(smart_init)
 #pragma resource "*.dfm"
 TForm1 *Form1;
+
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
 	: TForm(Owner)
 {
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::LoginClick(TObject *Sender)
+{
+    Login->Text = "";
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::PasswordClick(TObject *Sender)
+{
+	  Password->Text = "";
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::background_image1Click(TObject *Sender)
+{
+	 Login->Text = "Login";
+     Password->Text = "Password";
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::login_templateClick(TObject *Sender)
+{
+	 Login->Text = "Login";
+	 Password->Text = "Password";
 }
 //---------------------------------------------------------------------------
