@@ -1,3 +1,10 @@
+FireDAC260.bpl
+FireDACCommon260.bpl
+FireDACCommonDriver260.bpl
+FireDACMySQLDriver260.bpl
+dbrtl260.bpl
 rtl260.bpl
 vcl260.bpl
+vclFireDAC260.bpl
+vcldb260.bpl
 vclimg260.bpl

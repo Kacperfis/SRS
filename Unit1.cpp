@@ -13,6 +13,8 @@
 #pragma resource "*.dfm"
 TForm1 *Form1;
 
+AnsiString entry_login, entry_password;
+
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
 	: TForm(Owner)
@@ -41,3 +43,30 @@ void __fastcall TForm1::login_templateClick(TObject *Sender)
 	 Password->Text = "Password";
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm1::Login_buttonClick(TObject *Sender)
+{
+	  entry_login = Login->Text;
+	  entry_password = Password->Text;
+
+	  //database
+	  //FDConnection1->Connected = false;
+	 // FDConnection1->Connected = true;
+
+	 // Label1->Caption = DBGrid1->Columns[0];
+     //  DBText1->
+
+}
+//---------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+

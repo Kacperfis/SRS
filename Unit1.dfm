@@ -41884,9 +41884,10 @@ object Form1: TForm1
   end
   object login_template: TImage
     Left = 643
-    Top = 50
-    Width = 633
-    Height = 577
+    Top = 58
+    Width = 680
+    Height = 680
+    AutoSize = True
     Picture.Data = {
       0A544A504547496D6167655C4D0300FFD8FFE000104A46494600010101004800
       480000FFE202B04943435F50524F46494C45000101000002A06C636D73043000
@@ -49066,12 +49067,19 @@ object Form1: TForm1
       874F8A937D7BE468159A09B85289A42F26B5C1B2678FA6C490789CC5678A2584
       B244D252AB4F386080CCC77324AB55AA339F8C4A024948E083CB5EB0E7D4FA7D
       3FDF3FFFD9}
+    OnClick = Login_buttonClick
+  end
+  object Label1: TLabel
+    Left = 672
+    Top = 176
+    Width = 3
+    Height = 13
   end
   object Login: TEdit
     Left = 833
-    Top = 358
+    Top = 366
     Width = 353
-    Height = 50
+    Height = 48
     Alignment = taCenter
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clGrayText
@@ -49085,7 +49093,7 @@ object Form1: TForm1
   end
   object Password: TEdit
     Left = 833
-    Top = 432
+    Top = 440
     Width = 353
     Height = 48
     Alignment = taCenter
@@ -49100,5 +49108,62 @@ object Form1: TForm1
     Text = 'Password'
     TextHint = '*'
     OnClick = PasswordClick
+  end
+  object DBGrid1: TDBGrid
+    Left = 120
+    Top = 264
+    Width = 320
+    Height = 120
+    DataSource = DataSource1
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'login'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'password'
+        Visible = True
+      end>
+  end
+  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    DriverID = 'MyDriver'
+    VendorLib = 'D:\PROGRAMOWA'#323'SKO\Register_project\libmysql.dll'
+    Left = 88
+    Top = 24
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=users'
+      'User_Name=admin'
+      'Password=admin'
+      'Server=localhost'
+      'DriverID=MyDriver')
+    Left = 200
+    Top = 24
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select * from data')
+    Left = 280
+    Top = 24
+  end
+  object DataSource1: TDataSource
+    DataSet = FDQuery1
+    Left = 256
+    Top = 144
   end
 end

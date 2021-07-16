@@ -337,4 +337,42 @@
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.ExtCtrls.hpp \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.ListActns.hpp \
   Unit1.cpp D:\PROGRAMOWAŃSKO\Register_project/Unit1.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.Imaging.jpeg.hpp
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.Imaging.jpeg.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\Data.DB.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\System.MaskUtils.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\Data.SqlTimSt.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\Data.FmtBcd.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\Data.DBCommonTypes.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.Comp.Client.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.Stan.Intf.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\System.IniFiles.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.Stan.Consts.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.Stan.Param.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.Stan.SQLTimeInt.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.Stan.Util.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\System.Win.Registry.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\System.Win.ComObj.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.Stan.Error.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.DatS.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.Stan.Option.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.UI.Intf.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.Phys.Intf.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.DApt.Column.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.DApt.Intf.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.Comp.DataSet.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.Comp.UI.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.Phys.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.Stan.Factory.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.Phys.SQLGenerator.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.Phys.MySQL.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.Phys.MySQLDef.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.Stan.Async.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.Stan.Def.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.Stan.Pool.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.VCLUI.Wait.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\FireDAC.DApt.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.DBGrids.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.Grids.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.Mask.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.DBCtrls.hpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.Buttons.hpp
