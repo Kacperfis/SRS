@@ -41880,7 +41880,7 @@ object Form1: TForm1
       04A643B19791AD2936349B74956B9FA4EDE7177F4808EECF9696758EA7B0E380
       E701B06E49489F3AEE8CE2EBB55F9229ADCD3904E3FFD9}
     OnClick = background_image1Click
-    ExplicitLeft = -8
+    ExplicitTop = 8
   end
   object login_template: TImage
     Left = 643
@@ -48657,7 +48657,7 @@ object Form1: TForm1
   end
   object Login_button: TImage
     Left = 874
-    Top = 552
+    Top = 560
     Width = 217
     Height = 48
     AutoSize = True
@@ -49070,10 +49070,19 @@ object Form1: TForm1
     OnClick = Login_buttonClick
   end
   object Label1: TLabel
-    Left = 672
-    Top = 176
-    Width = 3
-    Height = 13
+    Left = 874
+    Top = 632
+    Width = 217
+    Height = 32
+    Alignment = taCenter
+    Caption = 'Login Successful! '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 20
+    Font.Name = 'Ubuntu'
+    Font.Style = []
+    ParentFont = False
+    Visible = False
   end
   object Login: TEdit
     Left = 833
@@ -49109,40 +49118,20 @@ object Form1: TForm1
     TextHint = '*'
     OnClick = PasswordClick
   end
-  object DBGrid1: TDBGrid
-    Left = 120
-    Top = 264
-    Width = 320
-    Height = 120
-    DataSource = DataSource1
+  object ProgressBar1: TProgressBar
+    Left = 874
+    Top = 670
+    Width = 217
+    Height = 15
+    Smooth = True
     TabOrder = 2
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'Tahoma'
-    TitleFont.Style = []
-    Columns = <
-      item
-        Expanded = False
-        FieldName = 'ID'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'login'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'password'
-        Visible = True
-      end>
+    Visible = False
   end
   object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
-    DriverID = 'MyDriver'
-    VendorLib = 'D:\PROGRAMOWA'#323'SKO\Register_project\libmysql.dll'
-    Left = 88
-    Top = 24
+    DriverID = 'MyPhysDriver'
+    VendorLib = 'D:\PROGRAMOWA'#323'SKO\Register_project\libmysql2.dll'
+    Left = 112
+    Top = 64
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
@@ -49150,20 +49139,20 @@ object Form1: TForm1
       'User_Name=admin'
       'Password=admin'
       'Server=localhost'
-      'DriverID=MyDriver')
-    Left = 200
-    Top = 24
+      'DriverID=MyPhysDriver')
+    Left = 224
+    Top = 64
   end
   object FDQuery1: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
       'select * from data')
-    Left = 280
-    Top = 24
+    Left = 312
+    Top = 64
   end
   object DataSource1: TDataSource
     DataSet = FDQuery1
-    Left = 256
-    Top = 144
+    Left = 192
+    Top = 224
   end
 end

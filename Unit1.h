@@ -31,6 +31,7 @@
 #include <Vcl.DBGrids.hpp>
 #include <Vcl.Grids.hpp>
 #include <Vcl.DBCtrls.hpp>
+#include <Vcl.ComCtrls.hpp>
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
 {
@@ -44,7 +45,7 @@ __published:	// IDE-managed Components
 	TFDConnection *FDConnection1;
 	TFDQuery *FDQuery1;
 	TDataSource *DataSource1;
-	TDBGrid *DBGrid1;
+	TProgressBar *ProgressBar1;
 	TLabel *Label1;
 	void __fastcall LoginClick(TObject *Sender);
 	void __fastcall PasswordClick(TObject *Sender);

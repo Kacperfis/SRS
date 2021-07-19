@@ -336,7 +336,9 @@
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.ToolWin.hpp \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.ExtCtrls.hpp \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.ListActns.hpp \
-  Unit1.cpp D:\PROGRAMOWAŃSKO\Register_project/Unit1.h \
+  Unit1.cpp \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\dinkumware64\string \
+  D:\PROGRAMOWAŃSKO\Register_project/Unit1.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.Imaging.jpeg.hpp \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\Data.DB.hpp \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\System.MaskUtils.hpp \
