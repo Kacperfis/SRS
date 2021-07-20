@@ -49069,21 +49069,6 @@ object Form1: TForm1
       3FDF3FFFD9}
     OnClick = Login_buttonClick
   end
-  object Label1: TLabel
-    Left = 874
-    Top = 632
-    Width = 217
-    Height = 32
-    Alignment = taCenter
-    Caption = 'Login Successful! '
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = 20
-    Font.Name = 'Ubuntu'
-    Font.Style = []
-    ParentFont = False
-    Visible = False
-  end
   object Login: TEdit
     Left = 833
     Top = 366
@@ -49117,15 +49102,6 @@ object Form1: TForm1
     Text = 'Password'
     TextHint = '*'
     OnClick = PasswordClick
-  end
-  object ProgressBar1: TProgressBar
-    Left = 874
-    Top = 670
-    Width = 217
-    Height = 15
-    Smooth = True
-    TabOrder = 2
-    Visible = False
   end
   object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
     DriverID = 'MyPhysDriver'

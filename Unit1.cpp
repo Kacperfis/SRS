@@ -62,7 +62,6 @@ void __fastcall TForm1::Login_buttonClick(TObject *Sender)
 	 // DBGrid1->DataSource = DataSource1;
 
 	  if(!FDQuery1 ->Eof){ //login and go to main page
-		 Label1->Visible = true;
 		 Form1->Visible = false;
 		 Form2->Visible = true;
 

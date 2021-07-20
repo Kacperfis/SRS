@@ -45,8 +45,6 @@ __published:	// IDE-managed Components
 	TFDConnection *FDConnection1;
 	TFDQuery *FDQuery1;
 	TDataSource *DataSource1;
-	TProgressBar *ProgressBar1;
-	TLabel *Label1;
 	void __fastcall LoginClick(TObject *Sender);
 	void __fastcall PasswordClick(TObject *Sender);
 	void __fastcall background_image1Click(TObject *Sender);

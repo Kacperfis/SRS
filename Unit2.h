@@ -14,6 +14,15 @@ class TForm2 : public TForm
 {
 __published:	// IDE-managed Components
 	TImage *Image1;
+	TImage *Image2;
+	TImage *Image3;
+	TImage *Image4;
+	TImage *Image5;
+	TImage *Image6;
+	TImage *Image7;
+	TImage *Image8;
+	TImage *Image10;
+	TImage *Image9;
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm2(TComponent* Owner);
