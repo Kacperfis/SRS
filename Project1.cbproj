@@ -153,27 +153,27 @@
             <BuildOrder>1</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
-        <CppCompile Include="Unit1.cpp">
+        <CppCompile Include="Unit1_LogonPage.cpp">
             <Form>Form1</Form>
             <FormType>dfm</FormType>
-            <DependentOn>Unit1.h</DependentOn>
+            <DependentOn>Unit1_LogonPage.h</DependentOn>
             <BuildOrder>2</BuildOrder>
         </CppCompile>
-        <CppCompile Include="Unit2.cpp">
+        <CppCompile Include="Unit2_MainPage.cpp">
             <Form>Form2</Form>
             <FormType>dfm</FormType>
-            <DependentOn>Unit2.h</DependentOn>
+            <DependentOn>Unit2_MainPage.h</DependentOn>
             <BuildOrder>3</BuildOrder>
         </CppCompile>
-        <CppCompile Include="Unit3.cpp">
+        <CppCompile Include="Unit3_AdministratorPage.cpp">
             <Form>Form3</Form>
             <FormType>dfm</FormType>
-            <DependentOn>Unit3.h</DependentOn>
+            <DependentOn>Unit3_AdministratorPage.h</DependentOn>
             <BuildOrder>4</BuildOrder>
         </CppCompile>
-        <FormResources Include="Unit2.dfm"/>
-        <FormResources Include="Unit1.dfm"/>
-        <FormResources Include="Unit3.dfm"/>
+        <FormResources Include="Unit3_AdministratorPage.dfm"/>
+        <FormResources Include="Unit2_MainPage.dfm"/>
+        <FormResources Include="Unit1_LogonPage.dfm"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
