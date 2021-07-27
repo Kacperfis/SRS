@@ -9,11 +9,14 @@
 #include <Vcl.Forms.hpp>
 #include <Vcl.ExtCtrls.hpp>
 #include <Vcl.Imaging.jpeg.hpp>
+#include <Vcl.Imaging.pngimage.hpp>
 //---------------------------------------------------------------------------
 class TForm3 : public TForm
 {
 __published:	// IDE-managed Components
 	TImage *Image1;
+	TImage *pi;
+	void __fastcall piClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm3(TComponent* Owner);
