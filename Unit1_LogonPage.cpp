@@ -55,7 +55,7 @@ void __fastcall TForm1::Login_buttonClick(TObject *Sender)
 {
 	  String entry_login = Login->Text;
 	  String entry_password = Password->Text;
-	  String query = "select ID from data where login = '"+entry_login+"' and password = '"+entry_password+"'";
+	  String query = "select id_person from data where login = '"+entry_login+"' and password = '"+entry_password+"'";
 
 
 	  FDQuery1->SQL->Text = query;
