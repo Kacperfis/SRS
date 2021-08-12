@@ -20,13 +20,13 @@ namespace std{
 	map<int,string> classes = {{1, "1A"}, {2, "1B"}, {3, "2A"}, {4, "2B"}, {5, "3A"}, {6, "3B"},
 	 {7, "4A"}, {8, "4B"}, {9, "5A"}, {10, "5B"}, {11, "6A"}, {12, "6B"}};
 
-	 int return_id(string s){
+	 string return_id(int x){
 		for(auto it : classes){
-			if(it.second == s){
-				return it.first;
+			if(it.first == x){
+				return it.second;
 			}
 		}
-        return -1;
+		return "";
 	 }
 }
 
@@ -149,25 +149,29 @@ void __fastcall TForm3::Button1Click(TObject *Sender)
 	  temp_id_info++;
 	  ID_INFO = IntToStr(temp_id_info);
 
-
 	 // Edit1->Text = ID_PERSON;
 	 // Edit2->Text = ID_INFO;
 
-
+	  int list_id = ListBox1->ItemIndex + 1;
+	  Edit1->Text = list_id;
+	  std::string klasa = std::return_id(list_id);
+	  AnsiString Ansiklasa = AnsiString(klasa.c_str());
+      Edit2->Text = Ansiklasa;
 
 	  String query1 = "insert into data(id_person, login, password)values('"+ID_PERSON+"','"+entry_login+"','"+entry_password+"')";
 	  String query2 = "insert into info(id_info, id_person, name, surname, phone_number, email, PESEL)values('"+ID_INFO+"','"+ID_PERSON+"','"+name+"','"+surname+"','"+phone_number+"','"+email+"','"+pesel+"')";
 	  String query3 = "insert into person_type(id_person, type)values('"+ID_PERSON+"','"+type+"')";
+	  String query6 = "insert into class(id_person, id_class, class)values('"+ID_PERSON+"','"+list_id+"','"+Ansiklasa+"')";
 
 	  FDQuery1->SQL->Text = query1;
 	  FDQuery2->SQL->Text = query2;
 	  FDQuery3->SQL->Text = query3;
+	  FDQuery6->SQL->Text = query6;
 
 	  FDQuery1->ExecSQL(true);
 	  FDQuery2->ExecSQL(true);
 	  FDQuery3->ExecSQL(true);
-
-
+	  FDQuery6->ExecSQL(true);
 
 	  /*
 	  Edit1->Text = "";

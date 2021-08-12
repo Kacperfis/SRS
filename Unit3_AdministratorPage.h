@@ -63,6 +63,7 @@ __published:	// IDE-managed Components
 	TFDConnection *FDConnection1;
 	TFDQuery *FDQuery4;
 	TFDQuery *FDQuery5;
+	TFDQuery *FDQuery6;
 	void __fastcall piClick(TObject *Sender);
 	void __fastcall Add_user_buttonClick(TObject *Sender);
 	void __fastcall Button1Click(TObject *Sender);

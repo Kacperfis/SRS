@@ -13596,4 +13596,9 @@ object Form3: TForm3
     Left = 712
     Top = 32
   end
+  object FDQuery6: TFDQuery
+    Connection = FDConnection1
+    Left = 768
+    Top = 32
+  end
 end
