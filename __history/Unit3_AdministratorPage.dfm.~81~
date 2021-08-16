@@ -13605,14 +13605,6 @@ object Form3: TForm3
       610119C20232840564080BC8101690F1010F478BFEAD4FEB720000000049454E
       44AE426082}
   end
-  object Label10: TLabel
-    Left = 71
-    Top = 306
-    Width = 25
-    Height = 13
-    Caption = 'Pesel'
-    Visible = False
-  end
   object Label11: TLabel
     Left = 407
     Top = 145
@@ -13621,7 +13613,7 @@ object Form3: TForm3
     Caption = 'Pesel'
   end
   object Label12: TLabel
-    Left = 400
+    Left = 407
     Top = 194
     Width = 285
     Height = 15
@@ -13634,7 +13626,7 @@ object Form3: TForm3
     ParentFont = False
   end
   object Label13: TLabel
-    Left = 400
+    Left = 407
     Top = 215
     Width = 125
     Height = 15
@@ -13824,7 +13816,7 @@ object Form3: TForm3
   end
   object Image4: TImage
     Left = 750
-    Top = 192
+    Top = 194
     Width = 300
     Height = 50
     AutoSize = True
@@ -14266,7 +14258,7 @@ object Form3: TForm3
       F50157D26CA9805254FF0000000049454E44AE426082}
   end
   object Label14: TLabel
-    Left = 424
+    Left = 435
     Top = 395
     Width = 230
     Height = 20
@@ -14500,6 +14492,70 @@ object Form3: TForm3
       0021E2078010F1034088F8012044FC0010227E0008F98D85DB9106646B4C0000
       000049454E44AE426082}
   end
+  object Label10: TLabel
+    Left = 1089
+    Top = 132
+    Width = 50
+    Height = 30
+    Alignment = taCenter
+    AutoSize = False
+    Color = clGray
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label15: TLabel
+    Left = 1089
+    Top = 202
+    Width = 50
+    Height = 30
+    Alignment = taCenter
+    AutoSize = False
+    Color = clGray
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label16: TLabel
+    Left = 1089
+    Top = 279
+    Width = 50
+    Height = 30
+    Alignment = taCenter
+    AutoSize = False
+    Color = clGray
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label17: TLabel
+    Left = 1089
+    Top = 349
+    Width = 50
+    Height = 30
+    Alignment = taCenter
+    AutoSize = False
+    Color = clGray
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
   object Edit1: TEdit
     Left = 184
     Top = 140
@@ -14598,15 +14654,15 @@ object Form3: TForm3
     TabOrder = 10
   end
   object Edit8: TEdit
-    Left = 520
-    Top = 142
+    Left = 512
+    Top = 139
     Width = 153
     Height = 21
     TabOrder = 11
   end
   object CheckBox1: TCheckBox
-    Left = 400
-    Top = 240
+    Left = 407
+    Top = 236
     Width = 137
     Height = 24
     Caption = 'I confirm'
@@ -14619,13 +14675,77 @@ object Form3: TForm3
     TabOrder = 12
   end
   object Button2: TButton
-    Left = 407
+    Left = 415
     Top = 421
     Width = 270
     Height = 41
     Caption = 'Submit'
     TabOrder = 13
     OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 776
+    Top = 421
+    Width = 363
+    Height = 41
+    Caption = 'Load Data'
+    TabOrder = 14
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 1244
+    Top = 135
+    Width = 130
+    Height = 36
+    Caption = 'Add Task'
+    TabOrder = 15
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Left = 1404
+    Top = 135
+    Width = 130
+    Height = 36
+    Caption = 'Load Tasks'
+    TabOrder = 16
+    OnClick = Button5Click
+  end
+  object Button6: TButton
+    Left = 1564
+    Top = 132
+    Width = 130
+    Height = 36
+    Caption = 'Erase task'
+    TabOrder = 17
+  end
+  object Edit9: TEdit
+    Left = 1244
+    Top = 177
+    Width = 290
+    Height = 64
+    AutoSize = False
+    TabOrder = 18
+    Text = 'Your task content'
+    OnClick = Edit9Click
+  end
+  object ListBox2: TListBox
+    Left = 1244
+    Top = 247
+    Width = 450
+    Height = 210
+    ItemHeight = 13
+    TabOrder = 19
+  end
+  object Edit10: TEdit
+    Left = 1564
+    Top = 177
+    Width = 130
+    Height = 64
+    Alignment = taCenter
+    AutoSize = False
+    TabOrder = 20
+    Text = 'Task ID You want erase'
+    OnClick = Edit10Click
   end
   object FDQuery1: TFDQuery
     Connection = FDConnection1
@@ -14676,22 +14796,61 @@ object Form3: TForm3
   end
   object FDQuery8: TFDQuery
     Connection = FDConnection1
-    Left = 72
-    Top = 496
+    Left = 480
+    Top = 8
   end
   object FDQuery9: TFDQuery
     Connection = FDConnection1
-    Left = 128
-    Top = 496
+    Left = 536
+    Top = 8
   end
   object FDQuery10: TFDQuery
     Connection = FDConnection1
-    Left = 192
-    Top = 496
+    Left = 592
+    Top = 8
   end
   object FDQuery11: TFDQuery
     Connection = FDConnection1
-    Left = 256
-    Top = 496
+    Left = 656
+    Top = 8
+  end
+  object DataSource1: TDataSource
+    Left = 720
+    Top = 8
+  end
+  object FDQuery12: TFDQuery
+    Connection = FDConnection1
+    Left = 840
+    Top = 8
+  end
+  object FDQuery13: TFDQuery
+    Connection = FDConnection1
+    Left = 904
+    Top = 8
+  end
+  object FDQuery14: TFDQuery
+    Connection = FDConnection1
+    Left = 968
+    Top = 8
+  end
+  object FDQuery15: TFDQuery
+    Connection = FDConnection1
+    Left = 360
+    Top = 64
+  end
+  object FDQuery16: TFDQuery
+    Connection = FDConnection1
+    Left = 1784
+    Top = 136
+  end
+  object FDQuery17: TFDQuery
+    Connection = FDConnection1
+    Left = 1784
+    Top = 200
+  end
+  object FDQuery18: TFDQuery
+    Connection = FDConnection1
+    Left = 1784
+    Top = 272
   end
 end

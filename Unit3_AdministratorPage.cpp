@@ -104,7 +104,13 @@ void __fastcall TForm3::Button1Click(TObject *Sender)
 	  Edit1->Text = list_id;
 	  std::string klasa = std::return_id(list_id);
 	  AnsiString Ansiklasa = AnsiString(klasa.c_str());
-      Edit2->Text = Ansiklasa;
+	  Edit2->Text = Ansiklasa;
+
+	  if(RadioButton1->Checked == true){
+		 String query15 = "insert into form_teacher(id_person, id_class)values('"+ID_PERSON+"','"+list_id+"')";
+		 FDQuery15->SQL->Text = query15;
+		 FDQuery15->ExecSQL(true);
+	  }
 
 	  String query1 = "insert into data(id_person, login, password)values('"+ID_PERSON+"','"+entry_login+"','"+entry_password+"')";
 	  String query2 = "insert into info(id_info, id_person, name, surname, phone_number, email, PESEL)values('"+ID_INFO+"','"+ID_PERSON+"','"+name+"','"+surname+"','"+phone_number+"','"+email+"','"+pesel+"')";
@@ -132,6 +138,7 @@ void __fastcall TForm3::Button1Click(TObject *Sender)
 	  Edit7->Text = "";
 	  RadioButton1->Checked = false;
 	  RadioButton2->Checked = false;
+
 }
 //---------------------------------------------------------------------------
 
@@ -199,6 +206,70 @@ void __fastcall TForm3::Button3Click(TObject *Sender)
 	Label15->Caption = num_teachers;
 	Label16->Caption = "12";
     Label17->Caption = num_total;
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm3::Edit9Click(TObject *Sender)
+{
+    Edit9->Text = "";
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm3::Button4Click(TObject *Sender)
+{
+
+	//String query15 = "insert into form_teacher(id_person, id_class)values('"+ID_PERSON+"','"+list_id+"')";
+	if(Edit9->Text != ""){
+		String content = Edit9->Text;
+		String query16 = "insert into admin_tasks(task_message)values('"+content+"')";
+		FDQuery16->SQL->Text = query16;
+		FDQuery16->ExecSQL(true);
+		ShowMessage("Task added succesfully");
+		Edit9->Text = "Your task content";
+	}
+	else ShowMessage("You cannot add task with empty content");
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm3::Button5Click(TObject *Sender)
+{
+	//clear the ListBox
+	ListBox2->Clear();
+	//if(ListBox2->Items->Count == 0){
+		String query17 = "select * from admin_tasks";
+		FDQuery17->SQL->Text = query17;
+		FDQuery17->Active = true;
+
+		if(!FDQuery17->Eof){
+			FDQuery17->First();
+			do{
+				String one = FDQuery17->Fields->Fields[0]->AsString;
+				String two = FDQuery17->Fields->Fields[1]->AsString;
+
+				ListBox2->Items->Add(one + ". \t" + two);
+
+				FDQuery17->Next();
+			}while(!FDQuery17->Eof);
+		}
+		else ShowMessage("Task list is empty");
+   //	}
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm3::Edit10Click(TObject *Sender)
+{
+    Edit10->Text = "";
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm3::Button6Click(TObject *Sender)
+{
+	String temp_id = Edit10->Text;
+	String query18 = "delete from admin_tasks where id_task = '"+temp_id+"'";
+	FDQuery18->SQL->Text = query18;
+	FDQuery18->ExecSQL(true);
+	ShowMessage("Task deleted succesfully");
 }
 //---------------------------------------------------------------------------
 

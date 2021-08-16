@@ -13605,14 +13605,6 @@ object Form3: TForm3
       610119C20232840564080BC8101690F1010F478BFEAD4FEB720000000049454E
       44AE426082}
   end
-  object Label10: TLabel
-    Left = 71
-    Top = 306
-    Width = 25
-    Height = 13
-    Caption = 'Pesel'
-    Visible = False
-  end
   object Label11: TLabel
     Left = 407
     Top = 145
@@ -13824,7 +13816,7 @@ object Form3: TForm3
   end
   object Image4: TImage
     Left = 750
-    Top = 192
+    Top = 194
     Width = 300
     Height = 50
     AutoSize = True
@@ -14266,7 +14258,7 @@ object Form3: TForm3
       F50157D26CA9805254FF0000000049454E44AE426082}
   end
   object Label14: TLabel
-    Left = 424
+    Left = 435
     Top = 395
     Width = 230
     Height = 20
@@ -14500,6 +14492,70 @@ object Form3: TForm3
       0021E2078010F1034088F8012044FC0010227E0008F98D85DB9106646B4C0000
       000049454E44AE426082}
   end
+  object Label10: TLabel
+    Left = 1089
+    Top = 132
+    Width = 50
+    Height = 30
+    Alignment = taCenter
+    AutoSize = False
+    Color = clGray
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label15: TLabel
+    Left = 1089
+    Top = 202
+    Width = 50
+    Height = 30
+    Alignment = taCenter
+    AutoSize = False
+    Color = clGray
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label16: TLabel
+    Left = 1089
+    Top = 279
+    Width = 50
+    Height = 30
+    Alignment = taCenter
+    AutoSize = False
+    Color = clGray
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label17: TLabel
+    Left = 1089
+    Top = 349
+    Width = 50
+    Height = 30
+    Alignment = taCenter
+    AutoSize = False
+    Color = clGray
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
   object Edit1: TEdit
     Left = 184
     Top = 140
@@ -14598,8 +14654,8 @@ object Form3: TForm3
     TabOrder = 10
   end
   object Edit8: TEdit
-    Left = 520
-    Top = 142
+    Left = 512
+    Top = 139
     Width = 153
     Height = 21
     TabOrder = 11
@@ -14619,7 +14675,7 @@ object Form3: TForm3
     TabOrder = 12
   end
   object Button2: TButton
-    Left = 407
+    Left = 415
     Top = 421
     Width = 270
     Height = 41
@@ -14628,16 +14684,58 @@ object Form3: TForm3
     OnClick = Button2Click
   end
   object DBGrid1: TDBGrid
-    Left = 1256
-    Top = 165
-    Width = 449
-    Height = 120
+    Left = 1244
+    Top = 236
+    Width = 450
+    Height = 213
     TabOrder = 14
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object Button3: TButton
+    Left = 776
+    Top = 421
+    Width = 363
+    Height = 41
+    Caption = 'Load Data'
+    TabOrder = 15
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 1244
+    Top = 135
+    Width = 130
+    Height = 36
+    Caption = 'Add Task'
+    TabOrder = 16
+  end
+  object Button5: TButton
+    Left = 1404
+    Top = 135
+    Width = 130
+    Height = 36
+    Caption = 'Load Tasks'
+    TabOrder = 17
+  end
+  object Button6: TButton
+    Left = 1564
+    Top = 135
+    Width = 130
+    Height = 36
+    Caption = 'Erase task'
+    TabOrder = 18
+  end
+  object Edit9: TEdit
+    Left = 1244
+    Top = 177
+    Width = 450
+    Height = 53
+    TabOrder = 19
+    Text = 'Your task content'
+    OnClick = Edit9Click
   end
   object FDQuery1: TFDQuery
     Connection = FDConnection1
@@ -14709,5 +14807,25 @@ object Form3: TForm3
   object DataSource1: TDataSource
     Left = 720
     Top = 8
+  end
+  object FDQuery12: TFDQuery
+    Connection = FDConnection1
+    Left = 840
+    Top = 8
+  end
+  object FDQuery13: TFDQuery
+    Connection = FDConnection1
+    Left = 904
+    Top = 8
+  end
+  object FDQuery14: TFDQuery
+    Connection = FDConnection1
+    Left = 968
+    Top = 8
+  end
+  object FDQuery15: TFDQuery
+    Connection = FDConnection1
+    Left = 360
+    Top = 64
   end
 end

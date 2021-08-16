@@ -14683,25 +14683,13 @@ object Form3: TForm3
     TabOrder = 13
     OnClick = Button2Click
   end
-  object DBGrid1: TDBGrid
-    Left = 1244
-    Top = 194
-    Width = 450
-    Height = 255
-    TabOrder = 14
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'Tahoma'
-    TitleFont.Style = []
-  end
   object Button3: TButton
     Left = 776
     Top = 421
     Width = 363
     Height = 41
     Caption = 'Load Data'
-    TabOrder = 15
+    TabOrder = 14
     OnClick = Button3Click
   end
   object Button4: TButton
@@ -14710,7 +14698,8 @@ object Form3: TForm3
     Width = 130
     Height = 36
     Caption = 'Add Task'
-    TabOrder = 16
+    TabOrder = 15
+    OnClick = Button4Click
   end
   object Button5: TButton
     Left = 1404
@@ -14718,15 +14707,46 @@ object Form3: TForm3
     Width = 130
     Height = 36
     Caption = 'Load Tasks'
-    TabOrder = 17
+    TabOrder = 16
+    OnClick = Button5Click
   end
   object Button6: TButton
     Left = 1564
-    Top = 135
+    Top = 132
     Width = 130
     Height = 36
-    Caption = 'Erase task'
+    Caption = 'Delete task'
+    TabOrder = 17
+    OnClick = Button6Click
+  end
+  object Edit9: TEdit
+    Left = 1244
+    Top = 177
+    Width = 290
+    Height = 64
+    AutoSize = False
     TabOrder = 18
+    Text = 'Your task content'
+    OnClick = Edit9Click
+  end
+  object ListBox2: TListBox
+    Left = 1244
+    Top = 247
+    Width = 450
+    Height = 210
+    ItemHeight = 13
+    TabOrder = 19
+  end
+  object Edit10: TEdit
+    Left = 1564
+    Top = 177
+    Width = 130
+    Height = 64
+    Alignment = taCenter
+    AutoSize = False
+    TabOrder = 20
+    Text = 'Task ID You want delete'
+    OnClick = Edit10Click
   end
   object FDQuery1: TFDQuery
     Connection = FDConnection1
@@ -14813,5 +14833,25 @@ object Form3: TForm3
     Connection = FDConnection1
     Left = 968
     Top = 8
+  end
+  object FDQuery15: TFDQuery
+    Connection = FDConnection1
+    Left = 360
+    Top = 64
+  end
+  object FDQuery16: TFDQuery
+    Connection = FDConnection1
+    Left = 1784
+    Top = 136
+  end
+  object FDQuery17: TFDQuery
+    Connection = FDConnection1
+    Left = 1784
+    Top = 200
+  end
+  object FDQuery18: TFDQuery
+    Connection = FDConnection1
+    Left = 1784
+    Top = 272
   end
 end

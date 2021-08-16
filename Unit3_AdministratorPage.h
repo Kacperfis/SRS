@@ -92,7 +92,6 @@ __published:	// IDE-managed Components
 	TLabel *Label14;
 	TImage *Image12;
 	TImage *Image14;
-	TDBGrid *DBGrid1;
 	TDataSource *DataSource1;
 	TLabel *Label10;
 	TLabel *Label15;
@@ -105,10 +104,22 @@ __published:	// IDE-managed Components
 	TButton *Button4;
 	TButton *Button5;
 	TButton *Button6;
+	TFDQuery *FDQuery15;
+	TEdit *Edit9;
+	TFDQuery *FDQuery16;
+	TFDQuery *FDQuery17;
+	TFDQuery *FDQuery18;
+	TListBox *ListBox2;
+	TEdit *Edit10;
 	void __fastcall piClick(TObject *Sender);
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall Button2Click(TObject *Sender);
 	void __fastcall Button3Click(TObject *Sender);
+	void __fastcall Edit9Click(TObject *Sender);
+	void __fastcall Button4Click(TObject *Sender);
+	void __fastcall Button5Click(TObject *Sender);
+	void __fastcall Edit10Click(TObject *Sender);
+	void __fastcall Button6Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm3(TComponent* Owner);
