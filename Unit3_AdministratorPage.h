@@ -29,6 +29,8 @@
 #include <FireDAC.Stan.Pool.hpp>
 #include <FireDAC.UI.Intf.hpp>
 #include <FireDAC.VCLUI.Wait.hpp>
+#include <Vcl.DBGrids.hpp>
+#include <Vcl.Grids.hpp>
 //---------------------------------------------------------------------------
 class TForm3 : public TForm
 {
@@ -64,9 +66,49 @@ __published:	// IDE-managed Components
 	TFDQuery *FDQuery4;
 	TFDQuery *FDQuery5;
 	TFDQuery *FDQuery6;
+	TImage *Image1;
+	TImage *Image2;
+	TEdit *Edit8;
+	TLabel *Label11;
+	TLabel *Label12;
+	TLabel *Label13;
+	TCheckBox *CheckBox1;
+	TButton *Button2;
+	TImage *Image7;
+	TImage *Image8;
+	TImage *Image9;
+	TImage *Image10;
+	TImage *Image3;
+	TImage *Image4;
+	TImage *Image5;
+	TImage *Image6;
+	TImage *Image11;
+	TImage *Image13;
+	TFDQuery *FDQuery7;
+	TFDQuery *FDQuery8;
+	TFDQuery *FDQuery9;
+	TFDQuery *FDQuery10;
+	TFDQuery *FDQuery11;
+	TLabel *Label14;
+	TImage *Image12;
+	TImage *Image14;
+	TDBGrid *DBGrid1;
+	TDataSource *DataSource1;
+	TLabel *Label10;
+	TLabel *Label15;
+	TLabel *Label16;
+	TLabel *Label17;
+	TFDQuery *FDQuery12;
+	TFDQuery *FDQuery13;
+	TFDQuery *FDQuery14;
+	TButton *Button3;
+	TButton *Button4;
+	TButton *Button5;
+	TButton *Button6;
 	void __fastcall piClick(TObject *Sender);
-	void __fastcall Add_user_buttonClick(TObject *Sender);
 	void __fastcall Button1Click(TObject *Sender);
+	void __fastcall Button2Click(TObject *Sender);
+	void __fastcall Button3Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm3(TComponent* Owner);

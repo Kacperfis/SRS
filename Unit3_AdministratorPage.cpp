@@ -53,58 +53,6 @@ void __fastcall TForm3::piClick(TObject *Sender)
 
 
 
-void __fastcall TForm3::Add_user_buttonClick(TObject *Sender)
-{
-
-	if(Form_back->Visible == false){
-	  Form_back->Visible = true;
-	  Edit1->Visible = true;
-	  Edit2->Visible = true;
-	  Edit3->Visible = true;
-	  Edit4->Visible = true;
-	  Edit5->Visible = true;
-	  Edit6->Visible = true;
-	  Edit7->Visible = true;
-	  Label1->Visible = true;
-	  Label2->Visible = true;
-	  Label3->Visible = true;
-	  Label4->Visible = true;
-	  Label5->Visible = true;
-	  Label6->Visible = true;
-	  Label7->Visible = true;
-	  Label8->Visible = true;
-	  Label9->Visible = true;
-	  Button1->Visible = true;
-	  ListBox1->Visible = true;
-	  RadioButton1->Visible = true;
-	  RadioButton2->Visible = true;
-	}
-	else{
-	  Form_back->Visible = false;
-	  Edit1->Visible = false;
-	  Edit2->Visible = false;
-	  Edit3->Visible = false;
-	  Edit4->Visible = false;
-	  Edit5->Visible = false;
-	  Edit6->Visible = false;
-	  Edit7->Visible = false;
-	  Label1->Visible = false;
-	  Label2->Visible = false;
-	  Label3->Visible = false;
-	  Label4->Visible = false;
-	  Label5->Visible = false;
-	  Label6->Visible = false;
-	  Label7->Visible = false;
-	  Label8->Visible = false;
-      Label9->Visible = false;
-	  Button1->Visible = false;
-	  ListBox1->Visible = false;
-	  RadioButton1->Visible = false;
-	  RadioButton2->Visible = false;
-    }
-
-}
-//---------------------------------------------------------------------------
 
 
 
@@ -173,7 +121,8 @@ void __fastcall TForm3::Button1Click(TObject *Sender)
 	  FDQuery3->ExecSQL(true);
 	  FDQuery6->ExecSQL(true);
 
-	  /*
+	  ShowMessage("User added succesfully");
+
 	  Edit1->Text = "";
 	  Edit2->Text = "";
 	  Edit3->Text = "";
@@ -181,7 +130,75 @@ void __fastcall TForm3::Button1Click(TObject *Sender)
 	  Edit5->Text = "";
 	  Edit6->Text = "";
 	  Edit7->Text = "";
-      */
+	  RadioButton1->Checked = false;
+	  RadioButton2->Checked = false;
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TForm3::Button2Click(TObject *Sender)
+{
+	String input_pesel = Edit8->Text;
+	if(CheckBox1->Checked == true){
+        Label14->Visible = false;
+		String query = "select id_person from info where pesel = '"+input_pesel+"'";
+		FDQuery7->SQL->Text = query;
+		FDQuery7->Active = true;
+		if(!FDQuery7->Eof){
+			String ERASE_ID;
+			ERASE_ID = FDQuery7->Fields->Fields[0]->AsString;
+			String erase_query1 = "delete from data where id_person = '"+ERASE_ID+"'";
+			String erase_query2 = "delete from class where id_person = '"+ERASE_ID+"'";
+			String erase_query3 = "delete from info where id_person = '"+ERASE_ID+"'";
+			String erase_query4 = "delete from person_type where id_person = '"+ERASE_ID+"'";
+
+			FDQuery8->SQL->Text = erase_query1;
+			FDQuery9->SQL->Text = erase_query2;
+			FDQuery10->SQL->Text = erase_query3;
+			FDQuery11->SQL->Text = erase_query4;
+
+			FDQuery8->ExecSQL(true);
+			FDQuery9->ExecSQL(true);
+			FDQuery10->ExecSQL(true);
+			FDQuery11->ExecSQL(true);
+
+			ShowMessage("User removed succesfully");
+			CheckBox1->Checked == false;
+		}
+	}
+	else{
+		Label14->Visible = true;
+	}
+}
+//---------------------------------------------------------------------------
+
+
+
+
+
+void __fastcall TForm3::Button3Click(TObject *Sender)
+{
+	String num_students_query = "select count(*) from person_type where type = 'Student'";
+	String num_teachers_query = "select count(*) from person_type where type = 'Teacher'";
+	String num_total_query = "select count(*) from person_type";
+
+	FDQuery12->SQL->Text = num_students_query;
+	FDQuery13->SQL->Text = num_teachers_query;
+	FDQuery14->SQL->Text = num_total_query;
+
+	FDQuery12->Active = true;
+	FDQuery13->Active = true;
+	FDQuery14->Active = true;
+
+	String num_students = FDQuery12->Fields->Fields[0]->AsString;
+	String num_teachers = FDQuery13->Fields->Fields[0]->AsString;
+	String num_total = FDQuery14->Fields->Fields[0]->AsString;
+
+	Label10->Caption = num_students;
+	Label15->Caption = num_teachers;
+	Label16->Caption = "12";
+    Label17->Caption = num_total;
 }
 //---------------------------------------------------------------------------
 
