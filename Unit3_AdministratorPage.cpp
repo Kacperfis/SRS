@@ -40,22 +40,11 @@ __fastcall TForm3::TForm3(TComponent* Owner)
 }
 //---------------------------------------------------------------------------
 
-
-
 void __fastcall TForm3::piClick(TObject *Sender)
 {
       Form3->Close();
 }
 //---------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
 
 void __fastcall TForm3::Button1Click(TObject *Sender)
 {
@@ -97,52 +86,49 @@ void __fastcall TForm3::Button1Click(TObject *Sender)
 	  temp_id_info++;
 	  ID_INFO = IntToStr(temp_id_info);
 
-	 // Edit1->Text = ID_PERSON;
-	 // Edit2->Text = ID_INFO;
-
 	  int list_id = ListBox1->ItemIndex + 1;
-	  Edit1->Text = list_id;
 	  std::string klasa = std::return_id(list_id);
 	  AnsiString Ansiklasa = AnsiString(klasa.c_str());
-	  Edit2->Text = Ansiklasa;
 
 	  if(RadioButton1->Checked == true){
 		 String query15 = "insert into form_teacher(id_person, id_class)values('"+ID_PERSON+"','"+list_id+"')";
 		 FDQuery15->SQL->Text = query15;
 		 FDQuery15->ExecSQL(true);
 	  }
+	  if(Edit1->Text != "" && Edit2->Text != "" && Edit3->Text != "" && Edit4->Text != "" && Edit5->Text != "" && Edit6->Text != "" && Edit7->Text != "" && (RadioButton1->Checked == true || RadioButton2->Checked == true)){
+		  String query1 = "insert into data(id_person, login, password)values('"+ID_PERSON+"','"+entry_login+"','"+entry_password+"')";
+		  String query2 = "insert into info(id_info, id_person, name, surname, phone_number, email, PESEL)values('"+ID_INFO+"','"+ID_PERSON+"','"+name+"','"+surname+"','"+phone_number+"','"+email+"','"+pesel+"')";
+		  String query3 = "insert into person_type(id_person, type)values('"+ID_PERSON+"','"+type+"')";
+		  String query6 = "insert into class(id_person, id_class, class)values('"+ID_PERSON+"','"+list_id+"','"+Ansiklasa+"')";
 
-	  String query1 = "insert into data(id_person, login, password)values('"+ID_PERSON+"','"+entry_login+"','"+entry_password+"')";
-	  String query2 = "insert into info(id_info, id_person, name, surname, phone_number, email, PESEL)values('"+ID_INFO+"','"+ID_PERSON+"','"+name+"','"+surname+"','"+phone_number+"','"+email+"','"+pesel+"')";
-	  String query3 = "insert into person_type(id_person, type)values('"+ID_PERSON+"','"+type+"')";
-	  String query6 = "insert into class(id_person, id_class, class)values('"+ID_PERSON+"','"+list_id+"','"+Ansiklasa+"')";
+		  FDQuery1->SQL->Text = query1;
+		  FDQuery2->SQL->Text = query2;
+		  FDQuery3->SQL->Text = query3;
+		  FDQuery6->SQL->Text = query6;
 
-	  FDQuery1->SQL->Text = query1;
-	  FDQuery2->SQL->Text = query2;
-	  FDQuery3->SQL->Text = query3;
-	  FDQuery6->SQL->Text = query6;
+		  FDQuery1->ExecSQL(true);
+		  FDQuery2->ExecSQL(true);
+		  FDQuery3->ExecSQL(true);
+		  FDQuery6->ExecSQL(true);
 
-	  FDQuery1->ExecSQL(true);
-	  FDQuery2->ExecSQL(true);
-	  FDQuery3->ExecSQL(true);
-	  FDQuery6->ExecSQL(true);
+		  ShowMessage("User added succesfully");
 
-	  ShowMessage("User added succesfully");
-
-	  Edit1->Text = "";
-	  Edit2->Text = "";
-	  Edit3->Text = "";
-	  Edit4->Text = "";
-	  Edit5->Text = "";
-	  Edit6->Text = "";
-	  Edit7->Text = "";
-	  RadioButton1->Checked = false;
-	  RadioButton2->Checked = false;
+		  Edit1->Text = "";
+		  Edit2->Text = "";
+		  Edit3->Text = "";
+		  Edit4->Text = "";
+		  Edit5->Text = "";
+		  Edit6->Text = "";
+		  Edit7->Text = "";
+		  RadioButton1->Checked = false;
+		  RadioButton2->Checked = false;
+	  }
+	  else{
+	      ShowMessage("You must enter all the data");
+      }
 
 }
 //---------------------------------------------------------------------------
-
-
 
 void __fastcall TForm3::Button2Click(TObject *Sender)
 {
@@ -180,10 +166,6 @@ void __fastcall TForm3::Button2Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-
-
-
-
 void __fastcall TForm3::Button3Click(TObject *Sender)
 {
 	String num_students_query = "select count(*) from person_type where type = 'Student'";
@@ -204,7 +186,7 @@ void __fastcall TForm3::Button3Click(TObject *Sender)
 
 	Label10->Caption = num_students;
 	Label15->Caption = num_teachers;
-	Label16->Caption = "12";
+	Label16->Caption = "12";   //numer of classes
     Label17->Caption = num_total;
 }
 //---------------------------------------------------------------------------
@@ -270,6 +252,25 @@ void __fastcall TForm3::Button6Click(TObject *Sender)
 	FDQuery18->SQL->Text = query18;
 	FDQuery18->ExecSQL(true);
 	ShowMessage("Task deleted succesfully");
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm3::Image16Click(TObject *Sender)
+{
+	String query19 = "select name, surname, phone_number, email, PESEL, class from info, class, person_type where info.id_person = class.id_person and person_type.id_person = info.id_person and person_type.type = 'Teacher';";
+	FDQuery19->SQL->Text = query19;
+	FDQuery19->Active = true;
+}
+//---------------------------------------------------------------------------
+
+
+
+
+void __fastcall TForm3::Image17Click(TObject *Sender)
+{
+	String query19 = "select name, surname, phone_number, email, PESEL, class from info, class, person_type where info.id_person = class.id_person and person_type.id_person = info.id_person and person_type.type = 'Student';";
+	FDQuery19->SQL->Text = query19;
+	FDQuery19->Active = true;
 }
 //---------------------------------------------------------------------------
 

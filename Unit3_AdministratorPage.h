@@ -31,6 +31,12 @@
 #include <FireDAC.VCLUI.Wait.hpp>
 #include <Vcl.DBGrids.hpp>
 #include <Vcl.Grids.hpp>
+#include <Vcl.DBCtrls.hpp>
+#include <VCLTee.Chart.hpp>
+#include <VclTee.TeeGDIPlus.hpp>
+#include <VCLTee.TeEngine.hpp>
+#include <VCLTee.TeeProcs.hpp>
+#include <VCLTee.Series.hpp>
 //---------------------------------------------------------------------------
 class TForm3 : public TForm
 {
@@ -111,6 +117,13 @@ __published:	// IDE-managed Components
 	TFDQuery *FDQuery18;
 	TListBox *ListBox2;
 	TEdit *Edit10;
+	TImage *Image15;
+	TImage *Image16;
+	TImage *Image17;
+	TFDQuery *FDQuery19;
+	TDBGrid *DBGrid1;
+	TChart *Chart1;
+	TBarSeries *Series1;
 	void __fastcall piClick(TObject *Sender);
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall Button2Click(TObject *Sender);
@@ -120,6 +133,8 @@ __published:	// IDE-managed Components
 	void __fastcall Button5Click(TObject *Sender);
 	void __fastcall Edit10Click(TObject *Sender);
 	void __fastcall Button6Click(TObject *Sender);
+	void __fastcall Image16Click(TObject *Sender);
+	void __fastcall Image17Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm3(TComponent* Owner);

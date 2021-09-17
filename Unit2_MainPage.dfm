@@ -6769,7 +6769,7 @@ object Form2: TForm2
       5A86A3B6F4D007F7DFFFD9}
   end
   object Image9: TImage
-    Left = 295
+    Left = 296
     Top = 440
     Width = 1329
     Height = 552
@@ -9479,7 +9479,7 @@ object Form2: TForm2
   object Label1: TLabel
     Left = 1832
     Top = 81
-    Width = 59
+    Width = 44
     Height = 17
     Alignment = taCenter
     Caption = 'Logout'
