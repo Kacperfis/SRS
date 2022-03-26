@@ -200,8 +200,6 @@ void __fastcall TForm3::Edit9Click(TObject *Sender)
 
 void __fastcall TForm3::Button4Click(TObject *Sender)
 {
-
-	//String query15 = "insert into form_teacher(id_person, id_class)values('"+ID_PERSON+"','"+list_id+"')";
 	if(Edit9->Text != ""){
 		String content = Edit9->Text;
 		String query16 = "insert into admin_tasks(task_message)values('"+content+"')";
@@ -218,24 +216,23 @@ void __fastcall TForm3::Button5Click(TObject *Sender)
 {
 	//clear the ListBox
 	ListBox2->Clear();
-	//if(ListBox2->Items->Count == 0){
-		String query17 = "select * from admin_tasks";
-		FDQuery17->SQL->Text = query17;
-		FDQuery17->Active = true;
 
-		if(!FDQuery17->Eof){
-			FDQuery17->First();
-			do{
-				String one = FDQuery17->Fields->Fields[0]->AsString;
-				String two = FDQuery17->Fields->Fields[1]->AsString;
+	String query17 = "select * from admin_tasks";
+	FDQuery17->SQL->Text = query17;
+	FDQuery17->Active = true;
 
-				ListBox2->Items->Add(one + ". \t" + two);
+	if(!FDQuery17->Eof){
+		FDQuery17->First();
+		do{
+			String one = FDQuery17->Fields->Fields[0]->AsString;
+			String two = FDQuery17->Fields->Fields[1]->AsString;
 
-				FDQuery17->Next();
-			}while(!FDQuery17->Eof);
-		}
-		else ShowMessage("Task list is empty");
-   //	}
+			ListBox2->Items->Add(one + ". \t" + two);
+
+			FDQuery17->Next();
+		}while(!FDQuery17->Eof);
+	}
+	else ShowMessage("Task list is empty");
 }
 //---------------------------------------------------------------------------
 
@@ -262,6 +259,7 @@ void __fastcall TForm3::Image16Click(TObject *Sender)
 	FDQuery19->Active = true;
 }
 //---------------------------------------------------------------------------
+
 
 
 

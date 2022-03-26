@@ -172,8 +172,15 @@
             <DependentOn>Unit3_AdministratorPage.h</DependentOn>
             <BuildOrder>4</BuildOrder>
         </CppCompile>
-        <FormResources Include="Unit3_AdministratorPage.dfm"/>
+        <CppCompile Include="Unit4_MarksPage.cpp">
+            <Form>Form4</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>Unit4_MarksPage.h</DependentOn>
+            <BuildOrder>5</BuildOrder>
+        </CppCompile>
         <FormResources Include="Unit2_MainPage.dfm"/>
+        <FormResources Include="Unit3_AdministratorPage.dfm"/>
+        <FormResources Include="Unit4_MarksPage.dfm"/>
         <FormResources Include="Unit1_LogonPage.dfm"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

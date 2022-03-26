@@ -6,6 +6,7 @@
 #include "Unit2_MainPage.h"
 #include "Unit1_LogonPage.h"
 #include "Unit3_AdministratorPage.h"
+#include "Unit4_MarksPage.h"
 
 //---------------------------------------------------------------------------
 //<a href='https://www.freepik.com/vectors/background'>Background vector created by starline - www.freepik.com</a>
@@ -40,4 +41,11 @@ void __fastcall TForm2::Image11Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+
+void __fastcall TForm2::Image3Click(TObject *Sender)
+{
+    Form4->StringGrid1->ColWidths[2] = 450;
+    Form4->Visible = true;
+}
+//---------------------------------------------------------------------------
 
