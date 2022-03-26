@@ -6,6 +6,8 @@
 #pragma package(smart_init)
 #pragma resource "*.dfm"
 
+static float average_mark = 0;
+
 TForm4 *Form4;
 //---------------------------------------------------------------------------
 __fastcall TForm4::TForm4(TComponent* Owner)
@@ -88,10 +90,16 @@ void __fastcall TForm4::Image2Click(TObject *Sender)
 	FDQuery4->SQL->Text = query4;
 	FDQuery4->Active = true;
 
+	float average = 0;
+	int number_of_marks = 0;
+
 	if(!FDQuery4->Eof){
 		int i = 0;
 		FDQuery4->First();
 		do{
+			number_of_marks++;
+			average += FDQuery4->Fields->Fields[0]->AsFloat;
+
 			String one = FDQuery4->Fields->Fields[0]->AsString;
 			String two = FDQuery4->Fields->Fields[1]->AsString;
 			String three = FDQuery4->Fields->Fields[2]->AsString;
@@ -104,6 +112,9 @@ void __fastcall TForm4::Image2Click(TObject *Sender)
 			FDQuery4->Next();
 		}while(!FDQuery4->Eof);
 	}
+
+	if(number_of_marks) average /= number_of_marks;
+    average_mark = average;
 }
 //---------------------------------------------------------------------------
 
@@ -120,4 +131,35 @@ void __fastcall TForm4::Image2Click(TObject *Sender)
 
 
 
+
+void __fastcall TForm4::Image10Click(TObject *Sender)
+{
+    Label4->Caption = average_mark;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm4::Image8Click(TObject *Sender)
+{
+/*
+	bool grade_check = false;
+	String grade = Edit1->Text;
+	String date = DateTimePicker1->Date;
+	String description = Edit2->Text;
+
+	if(grade == "1" || grade == "1+" || grade == "1" || grade == "2" || grade == "2+" || grade == "2-" || grade == "3"
+		|| grade == "3+" || grade == "3-" || grade == "4" || grade == "4+" || grade == "4-" || grade == "5" || grade == "5-"
+		|| grade == "5+" || grade == "6" || grade == "6-" || grade == "0")
+	{
+		grade_check = true;
+	}
+
+	if(!grade_check) Edit1->Text = "Set the Grade";
+	else
+	{
+		"insert into data(id_person, login, password)values('"+ID_PERSON+"','"+entry_login+"','"+entry_password+"')";
+		String query6 =  "insert into marks(id_mark, id_person, id_subject, mark, date_of_adding, description)values()";
+	}
+*/
+}
+//---------------------------------------------------------------------------
 

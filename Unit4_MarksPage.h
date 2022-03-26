@@ -64,10 +64,17 @@ __published:	// IDE-managed Components
 	TEdit *Edit2;
 	TFDQuery *FDQuery5;
 	TEdit *Edit1;
+	TImage *Image9;
+	TImage *Image10;
+	TImage *Image11;
+	TLabel *Label4;
+	TFDQuery *FDQuery6;
 	void __fastcall piClick(TObject *Sender);
 	void __fastcall Image4Click(TObject *Sender);
 	void __fastcall Image5Click(TObject *Sender);
 	void __fastcall Image2Click(TObject *Sender);
+	void __fastcall Image10Click(TObject *Sender);
+	void __fastcall Image8Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm4(TComponent* Owner);
