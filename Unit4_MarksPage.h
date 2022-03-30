@@ -69,6 +69,7 @@ __published:	// IDE-managed Components
 	TImage *Image11;
 	TLabel *Label4;
 	TFDQuery *FDQuery6;
+	TLabel *Label5;
 	void __fastcall piClick(TObject *Sender);
 	void __fastcall Image4Click(TObject *Sender);
 	void __fastcall Image5Click(TObject *Sender);

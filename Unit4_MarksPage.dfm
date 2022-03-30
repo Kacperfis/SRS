@@ -14210,6 +14210,19 @@ object Form4: TForm4
     ParentFont = False
     Layout = tlCenter
   end
+  object Label5: TLabel
+    Left = 591
+    Top = 936
+    Width = 1121
+    Height = 49
+    AutoSize = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
   object ListBox1: TListBox
     Left = 25
     Top = 156
@@ -14378,7 +14391,6 @@ object Form4: TForm4
       'DriverID=MyPhysDriver')
     FormatOptions.AssignedValues = [fvADOCompatibility]
     FormatOptions.ADOCompatibility = True
-    Connected = True
     Left = 40
     Top = 8
   end

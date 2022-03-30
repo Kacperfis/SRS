@@ -75,18 +75,21 @@ void __fastcall TForm4::Image5Click(TObject *Sender)
 
 void __fastcall TForm4::Image2Click(TObject *Sender)
 {
-	int choosen_class_id = ListBox1->ItemIndex + 1;
-	String choosen_class_id_string = IntToStr(choosen_class_id);
-	String query3 = "select info.id_person, name, surname from info, class where info.id_person = class.id_person and class.id_class = '"+choosen_class_id_string+"'";
+	String choosen_class_id = ListBox1->ItemIndex + 1;
+	String choosen_subject_id = ListBox2->ItemIndex + 1;
+
+	String query3 = "select info.id_person, name, surname from info, class where info.id_person = class.id_person and class.id_class = '"+choosen_class_id+"'";
 	FDQuery3->SQL->Text = query3;
 	FDQuery3->Active = true;
 
+	int choosen_person_id = ListBox3->ItemIndex;
+	FDQuery3->First();
+	for(int i = 0; i < choosen_person_id; i++){
+		FDQuery3->Next();
+	}
 	String query_id_person = FDQuery3->Fields->Fields[0]->AsString;
 
-	int choosen_student_id = ListBox3->ItemIndex + 1;
-	String choosen_student_id_string = IntToStr(choosen_student_id);
-
-	String query4 = "select mark, date_of_adding, description from marks where marks.id_person = '"+query_id_person+"'";
+	String query4 = "select mark, date_of_adding, description from marks where marks.id_person = '"+query_id_person+"' and marks.id_subject ='"+choosen_subject_id+"'";
 	FDQuery4->SQL->Text = query4;
 	FDQuery4->Active = true;
 
@@ -112,25 +115,17 @@ void __fastcall TForm4::Image2Click(TObject *Sender)
 			FDQuery4->Next();
 		}while(!FDQuery4->Eof);
 	}
+	else if(FDQuery4->Eof){
+		//Clearing grid
+		for(int i = 0; i < StringGrid1->RowCount; i++){
+			StringGrid1->Rows[i]->Clear();
+		}
+    }
 
 	if(number_of_marks) average /= number_of_marks;
-    average_mark = average;
+	average_mark = average;
 }
 //---------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 void __fastcall TForm4::Image10Click(TObject *Sender)
 {
@@ -140,7 +135,7 @@ void __fastcall TForm4::Image10Click(TObject *Sender)
 
 void __fastcall TForm4::Image8Click(TObject *Sender)
 {
-/*
+
 	bool grade_check = false;
 	String grade = Edit1->Text;
 	String date = DateTimePicker1->Date;
@@ -156,10 +151,27 @@ void __fastcall TForm4::Image8Click(TObject *Sender)
 	if(!grade_check) Edit1->Text = "Set the Grade";
 	else
 	{
-		"insert into data(id_person, login, password)values('"+ID_PERSON+"','"+entry_login+"','"+entry_password+"')";
-		String query6 =  "insert into marks(id_mark, id_person, id_subject, mark, date_of_adding, description)values()";
+		String choosen_class_id = ListBox1->ItemIndex + 1;
+		String choosen_subject_id = ListBox2->ItemIndex + 1;
+
+		String query3 = "select info.id_person, name, surname from info, class where info.id_person = class.id_person and class.id_class = '"+choosen_class_id+"'";
+		FDQuery3->SQL->Text = query3;
+		FDQuery3->Active = true;
+
+		int choosen_person_id = ListBox3->ItemIndex;
+		FDQuery3->First();
+		for(int i = 0; i < choosen_person_id; i++){
+			FDQuery3->Next();
+		}
+		String query_id_person = FDQuery3->Fields->Fields[0]->AsString;
+
+		//"insert into data(id_person, login, password)values('"+ID_PERSON+"','"+entry_login+"','"+entry_password+"')";
+
+		String query6 =  "insert into marks(id_person, id_subject, mark, date_of_adding, description)values('"+query_id_person+"','"+choosen_subject_id+"','"+grade+"','"+date+"','"+description+"')";
+		Label5->Caption = query6;
+        FDQuery6->SQL->Text = query6;
+        FDQuery6->ExecSQL(true);
 	}
-*/
 }
 //---------------------------------------------------------------------------
 
