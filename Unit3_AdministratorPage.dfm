@@ -16712,7 +16712,6 @@ object Form3: TForm3
       'DriverID=MyPhysDriver')
     FormatOptions.AssignedValues = [fvADOCompatibility]
     FormatOptions.ADOCompatibility = True
-    Connected = True
     Left = 184
     Top = 8
   end

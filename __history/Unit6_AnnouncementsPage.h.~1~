@@ -1,0 +1,30 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit6_AnnouncementsPageH
+#define Unit6_AnnouncementsPageH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Imaging.jpeg.hpp>
+#include <Vcl.Imaging.pngimage.hpp>
+//---------------------------------------------------------------------------
+class TForm6 : public TForm
+{
+__published:	// IDE-managed Components
+	TImage *Image1;
+	TButton *Button4;
+	TListBox *ListBox2;
+	TButton *Button5;
+	TListBox *ListBox1;
+	TImage *pi;
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm6(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm6 *Form6;
+//---------------------------------------------------------------------------
+#endif

@@ -13229,7 +13229,7 @@ object Form4: TForm4
     OnClick = piClick
   end
   object Image3: TImage
-    Left = 25
+    Left = 56
     Top = 100
     Width = 250
     Height = 50
@@ -13325,7 +13325,7 @@ object Form4: TForm4
       000049454E44AE426082}
   end
   object Image4: TImage
-    Left = 25
+    Left = 56
     Top = 399
     Width = 250
     Height = 50
@@ -13449,7 +13449,7 @@ object Form4: TForm4
     OnClick = Image4Click
   end
   object Image5: TImage
-    Left = 304
+    Left = 335
     Top = 100
     Width = 250
     Height = 50
@@ -13558,7 +13558,7 @@ object Form4: TForm4
     OnClick = Image5Click
   end
   object Image2: TImage
-    Left = 25
+    Left = 56
     Top = 786
     Width = 529
     Height = 97
@@ -13692,7 +13692,7 @@ object Form4: TForm4
     OnClick = Image2Click
   end
   object Image6: TImage
-    Left = 584
+    Left = 614
     Top = 100
     Width = 700
     Height = 50
@@ -13776,7 +13776,7 @@ object Form4: TForm4
       6A045E00000084DA7F0010A819DEE23CAB5D0000000049454E44AE426082}
   end
   object Image7: TImage
-    Left = 1312
+    Left = 1345
     Top = 100
     Width = 400
     Height = 500
@@ -13839,8 +13839,8 @@ object Form4: TForm4
       00240F35C6112C5F994D0F0000000049454E44AE426082}
   end
   object Image8: TImage
-    Left = 1337
-    Top = 504
+    Left = 1370
+    Top = 511
     Width = 350
     Height = 73
     Picture.Data = {
@@ -13941,8 +13941,8 @@ object Form4: TForm4
     OnClick = Image8Click
   end
   object Label1: TLabel
-    Left = 1337
-    Top = 109
+    Left = 1370
+    Top = 116
     Width = 350
     Height = 41
     Alignment = taCenter
@@ -13957,7 +13957,7 @@ object Form4: TForm4
     Layout = tlCenter
   end
   object Label2: TLabel
-    Left = 1337
+    Left = 1370
     Top = 214
     Width = 350
     Height = 41
@@ -13973,7 +13973,7 @@ object Form4: TForm4
     Layout = tlCenter
   end
   object Label3: TLabel
-    Left = 1337
+    Left = 1370
     Top = 308
     Width = 350
     Height = 41
@@ -13989,7 +13989,7 @@ object Form4: TForm4
     Layout = tlCenter
   end
   object Image9: TImage
-    Left = 1312
+    Left = 1345
     Top = 616
     Width = 400
     Height = 267
@@ -14029,7 +14029,7 @@ object Form4: TForm4
       44AE426082}
   end
   object Image10: TImage
-    Left = 1337
+    Left = 1370
     Top = 786
     Width = 350
     Height = 73
@@ -14172,7 +14172,7 @@ object Form4: TForm4
     OnClick = Image10Click
   end
   object Image11: TImage
-    Left = 1337
+    Left = 1370
     Top = 640
     Width = 350
     Height = 121
@@ -14196,7 +14196,7 @@ object Form4: TForm4
       49454E44AE426082}
   end
   object Label4: TLabel
-    Left = 1416
+    Left = 1448
     Top = 656
     Width = 193
     Height = 89
@@ -14210,21 +14210,8 @@ object Form4: TForm4
     ParentFont = False
     Layout = tlCenter
   end
-  object Label5: TLabel
-    Left = 591
-    Top = 936
-    Width = 1121
-    Height = 49
-    AutoSize = False
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -20
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-  end
   object ListBox1: TListBox
-    Left = 25
+    Left = 56
     Top = 156
     Width = 250
     Height = 237
@@ -14255,7 +14242,7 @@ object Form4: TForm4
     TabOrder = 0
   end
   object ListBox2: TListBox
-    Left = 25
+    Left = 56
     Top = 455
     Width = 250
     Height = 325
@@ -14272,7 +14259,7 @@ object Form4: TForm4
     TabOrder = 1
   end
   object ListBox3: TListBox
-    Left = 304
+    Left = 335
     Top = 156
     Width = 250
     Height = 624
@@ -14287,7 +14274,7 @@ object Form4: TForm4
     TabOrder = 2
   end
   object StringGrid1: TStringGrid
-    Left = 584
+    Left = 614
     Top = 156
     Width = 700
     Height = 727
@@ -14340,7 +14327,7 @@ object Form4: TForm4
       24)
   end
   object DateTimePicker1: TDateTimePicker
-    Left = 1337
+    Left = 1370
     Top = 261
     Width = 350
     Height = 41
@@ -14355,7 +14342,7 @@ object Form4: TForm4
     TabOrder = 4
   end
   object Edit2: TEdit
-    Left = 1337
+    Left = 1370
     Top = 355
     Width = 350
     Height = 134
@@ -14369,7 +14356,7 @@ object Form4: TForm4
     TabOrder = 5
   end
   object Edit1: TEdit
-    Left = 1337
+    Left = 1370
     Top = 163
     Width = 350
     Height = 41
@@ -14453,12 +14440,12 @@ object Form4: TForm4
   end
   object FDQuery5: TFDQuery
     Connection = FDConnection1
-    Left = 1320
-    Top = 48
+    Left = 1352
+    Top = 40
   end
   object FDQuery6: TFDQuery
     Connection = FDConnection1
-    Left = 1736
-    Top = 528
+    Left = 1424
+    Top = 40
   end
 end

@@ -2,6 +2,7 @@
 #pragma hdrstop
 
 #include "Unit4_MarksPage.h"
+#include <iomanip>
 
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -30,10 +31,13 @@ void __fastcall TForm4::Image4Click(TObject *Sender)
 	FDQuery2->SQL->Text = query2;
 	FDQuery2->Active = true;
 
-	if(ListBox2->Items->Count == 0){
-		if(!FDQuery2->Eof){
+	if(ListBox2->Items->Count == 0)
+	{
+		if(!FDQuery2->Eof)
+		{
 			FDQuery2->First();
-			do{
+			do
+			{
 				String one = FDQuery2->Fields->Fields[0]->AsString;
 				ListBox2->Items->Add(one);
 
@@ -49,17 +53,18 @@ void __fastcall TForm4::Image4Click(TObject *Sender)
 
 void __fastcall TForm4::Image5Click(TObject *Sender)
 {
-	int choosen_class_id = ListBox1->ItemIndex + 1;
-	String choosen_class_id_string = IntToStr(choosen_class_id);
-	String query3 = "select info.id_person, name, surname from info, class where info.id_person = class.id_person and class.id_class = '"+choosen_class_id_string+"'";
+	String choosen_class_id = ListBox1->ItemIndex + 1;
+	String query3 = "select info.id_person, name, surname from info, class where info.id_person = class.id_person and class.id_class = '"+choosen_class_id+"'";
 	FDQuery3->SQL->Text = query3;
 	FDQuery3->Active = true;
 
     if(ListBox3->Items->Count != 0) ListBox3->Items->Clear();
 
-	if(!FDQuery3->Eof){
+	if(!FDQuery3->Eof)
+	{
 		FDQuery3->First();
-		do{
+		do
+		{
 			String one = FDQuery3->Fields->Fields[0]->AsString;
 			String two = FDQuery3->Fields->Fields[1]->AsString;
 			String three = FDQuery3->Fields->Fields[2]->AsString;
@@ -84,7 +89,8 @@ void __fastcall TForm4::Image2Click(TObject *Sender)
 
 	int choosen_person_id = ListBox3->ItemIndex;
 	FDQuery3->First();
-	for(int i = 0; i < choosen_person_id; i++){
+	for(int i = 0; i < choosen_person_id; i++)
+	{
 		FDQuery3->Next();
 	}
 	String query_id_person = FDQuery3->Fields->Fields[0]->AsString;
@@ -96,10 +102,12 @@ void __fastcall TForm4::Image2Click(TObject *Sender)
 	float average = 0;
 	int number_of_marks = 0;
 
-	if(!FDQuery4->Eof){
+	if(!FDQuery4->Eof)
+	{
 		int i = 0;
 		FDQuery4->First();
-		do{
+		do
+		{
 			number_of_marks++;
 			average += FDQuery4->Fields->Fields[0]->AsFloat;
 
@@ -115,9 +123,11 @@ void __fastcall TForm4::Image2Click(TObject *Sender)
 			FDQuery4->Next();
 		}while(!FDQuery4->Eof);
 	}
-	else if(FDQuery4->Eof){
+	else if(FDQuery4->Eof)
+	{
 		//Clearing grid
-		for(int i = 0; i < StringGrid1->RowCount; i++){
+		for(int i = 0; i < StringGrid1->RowCount; i++)
+		{
 			StringGrid1->Rows[i]->Clear();
 		}
     }
@@ -129,7 +139,7 @@ void __fastcall TForm4::Image2Click(TObject *Sender)
 
 void __fastcall TForm4::Image10Click(TObject *Sender)
 {
-    Label4->Caption = average_mark;
+	Label4->Caption = average_mark;
 }
 //---------------------------------------------------------------------------
 
@@ -165,10 +175,7 @@ void __fastcall TForm4::Image8Click(TObject *Sender)
 		}
 		String query_id_person = FDQuery3->Fields->Fields[0]->AsString;
 
-		//"insert into data(id_person, login, password)values('"+ID_PERSON+"','"+entry_login+"','"+entry_password+"')";
-
 		String query6 =  "insert into marks(id_person, id_subject, mark, date_of_adding, description)values('"+query_id_person+"','"+choosen_subject_id+"','"+grade+"','"+date+"','"+description+"')";
-		Label5->Caption = query6;
         FDQuery6->SQL->Text = query6;
         FDQuery6->ExecSQL(true);
 	}

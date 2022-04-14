@@ -20,8 +20,8 @@
 #pragma resource "*.dfm"
 TForm1 *Form1;
 
-AnsiString entry_login, entry_password;
 int counter = 0;
+static AnsiString entry_login, entry_password;
 
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
@@ -53,25 +53,23 @@ void __fastcall TForm1::login_templateClick(TObject *Sender)
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Login_buttonClick(TObject *Sender)
 {
-	  String entry_login = Login->Text;
-	  String entry_password = Password->Text;
-	  String query = "select id_person from data where login = '"+entry_login+"' and password = '"+entry_password+"'";
+	 entry_login = Login->Text;
+	 entry_password = Password->Text;
+	 String query = "select id_person from data where login = '"+entry_login+"' and password = '"+entry_password+"'";
 
 
-	  FDQuery1->SQL->Text = query;
-	  FDQuery1->Active = true;
-	  DataSource1->DataSet = FDQuery1;
-	 // DBGrid1->DataSource = DataSource1;
+	 FDQuery1->SQL->Text = query;
+	 FDQuery1->Active = true;
+	 DataSource1->DataSet = FDQuery1;
 
-	  if(!FDQuery1 ->Eof){ //login and go to main page
-		 Form1->Visible = false;
-		 Form2->Visible = true;
-
-
-	  }
-	  else{ //no records
-		   ShowMessage("There is no such user. Please login to valid account");
-	  }
+	 if(!FDQuery1 ->Eof){ //login and go to main page
+		Form1->Visible = false;
+		Form2->Visible = true;
+	 }
+	 else
+	 { //no records
+	 	ShowMessage("There is no such user. Please login to valid account");
+	 }
 
 }
 //---------------------------------------------------------------------------
@@ -87,7 +85,8 @@ void __fastcall TForm1::Image1Click(TObject *Sender)
 void __fastcall TForm1::PasswordKeyDown(TObject *Sender, WORD &Key, TShiftState Shift)
 
 {
-	if(Key == VK_RETURN){
+	if(Key == VK_RETURN)
+	{
 		Form1->Login_buttonClick(Form1);
 	}
 }
@@ -96,7 +95,8 @@ void __fastcall TForm1::PasswordKeyDown(TObject *Sender, WORD &Key, TShiftState 
 void __fastcall TForm1::LoginKeyDown(TObject *Sender, WORD &Key, TShiftState Shift)
 
 {
-	if(Key == VK_RETURN){
+	if(Key == VK_RETURN)
+	{
 		Form1->Login_buttonClick(Form1);
 	}
 }

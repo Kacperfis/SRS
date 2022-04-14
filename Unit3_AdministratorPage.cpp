@@ -18,11 +18,13 @@ static int id_class = 1;
 
 namespace std{
 	map<int,string> classes = {{1, "1A"}, {2, "1B"}, {3, "2A"}, {4, "2B"}, {5, "3A"}, {6, "3B"},
-	 {7, "4A"}, {8, "4B"}, {9, "5A"}, {10, "5B"}, {11, "6A"}, {12, "6B"}};
-
-	 string return_id(int x){
-		for(auto it : classes){
-			if(it.first == x){
+							  {7, "4A"}, {8, "4B"}, {9, "5A"}, {10, "5B"}, {11, "6A"}, {12, "6B"}};
+	 string return_id(int x)
+	 {
+		for(auto it : classes)
+		{
+			if(it.first == x)
+			{
 				return it.second;
 			}
 		}
@@ -57,10 +59,12 @@ void __fastcall TForm3::Button1Click(TObject *Sender)
 	  String pesel = Edit7->Text;
 	  int Listbox_index = ListBox1->ItemIndex + 1;
 	  String type;
-	  if(RadioButton1->Checked == true){
+	  if(RadioButton1->Checked == true)
+	  {
 		 type = "Teacher";
 	  }
-	  else if(RadioButton2->Checked == true){
+	  else if(RadioButton2->Checked == true)
+	  {
          type = "Student";
 	  }
 
@@ -90,12 +94,16 @@ void __fastcall TForm3::Button1Click(TObject *Sender)
 	  std::string klasa = std::return_id(list_id);
 	  AnsiString Ansiklasa = AnsiString(klasa.c_str());
 
-	  if(RadioButton1->Checked == true){
+	  if(RadioButton1->Checked == true)
+	  {
 		 String query15 = "insert into form_teacher(id_person, id_class)values('"+ID_PERSON+"','"+list_id+"')";
 		 FDQuery15->SQL->Text = query15;
 		 FDQuery15->ExecSQL(true);
 	  }
-	  if(Edit1->Text != "" && Edit2->Text != "" && Edit3->Text != "" && Edit4->Text != "" && Edit5->Text != "" && Edit6->Text != "" && Edit7->Text != "" && (RadioButton1->Checked == true || RadioButton2->Checked == true)){
+
+	  if(Edit1->Text != "" && Edit2->Text != "" && Edit3->Text != "" && Edit4->Text != "" && Edit5->Text != ""
+		 && Edit6->Text != "" && Edit7->Text != "" && (RadioButton1->Checked == true || RadioButton2->Checked == true))
+	  {
 		  String query1 = "insert into data(id_person, login, password)values('"+ID_PERSON+"','"+entry_login+"','"+entry_password+"')";
 		  String query2 = "insert into info(id_info, id_person, name, surname, phone_number, email, PESEL)values('"+ID_INFO+"','"+ID_PERSON+"','"+name+"','"+surname+"','"+phone_number+"','"+email+"','"+pesel+"')";
 		  String query3 = "insert into person_type(id_person, type)values('"+ID_PERSON+"','"+type+"')";
@@ -123,7 +131,8 @@ void __fastcall TForm3::Button1Click(TObject *Sender)
 		  RadioButton1->Checked = false;
 		  RadioButton2->Checked = false;
 	  }
-	  else{
+	  else
+	  {
 	      ShowMessage("You must enter all the data");
       }
 
@@ -133,12 +142,15 @@ void __fastcall TForm3::Button1Click(TObject *Sender)
 void __fastcall TForm3::Button2Click(TObject *Sender)
 {
 	String input_pesel = Edit8->Text;
-	if(CheckBox1->Checked == true){
+	if(CheckBox1->Checked == true)
+	{
         Label14->Visible = false;
 		String query = "select id_person from info where pesel = '"+input_pesel+"'";
 		FDQuery7->SQL->Text = query;
 		FDQuery7->Active = true;
-		if(!FDQuery7->Eof){
+
+		if(!FDQuery7->Eof)
+		{
 			String ERASE_ID;
 			ERASE_ID = FDQuery7->Fields->Fields[0]->AsString;
 			String erase_query1 = "delete from data where id_person = '"+ERASE_ID+"'";
@@ -160,7 +172,8 @@ void __fastcall TForm3::Button2Click(TObject *Sender)
 			CheckBox1->Checked == false;
 		}
 	}
-	else{
+	else
+	{
 		Label14->Visible = true;
 	}
 }
@@ -200,7 +213,8 @@ void __fastcall TForm3::Edit9Click(TObject *Sender)
 
 void __fastcall TForm3::Button4Click(TObject *Sender)
 {
-	if(Edit9->Text != ""){
+	if(Edit9->Text != "")
+	{
 		String content = Edit9->Text;
 		String query16 = "insert into admin_tasks(task_message)values('"+content+"')";
 		FDQuery16->SQL->Text = query16;
@@ -214,16 +228,17 @@ void __fastcall TForm3::Button4Click(TObject *Sender)
 
 void __fastcall TForm3::Button5Click(TObject *Sender)
 {
-	//clear the ListBox
 	ListBox2->Clear();
 
 	String query17 = "select * from admin_tasks";
 	FDQuery17->SQL->Text = query17;
 	FDQuery17->Active = true;
 
-	if(!FDQuery17->Eof){
+	if(!FDQuery17->Eof)
+	{
 		FDQuery17->First();
-		do{
+		do
+		{
 			String one = FDQuery17->Fields->Fields[0]->AsString;
 			String two = FDQuery17->Fields->Fields[1]->AsString;
 
@@ -259,10 +274,6 @@ void __fastcall TForm3::Image16Click(TObject *Sender)
 	FDQuery19->Active = true;
 }
 //---------------------------------------------------------------------------
-
-
-
-
 
 void __fastcall TForm3::Image17Click(TObject *Sender)
 {

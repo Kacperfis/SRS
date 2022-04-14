@@ -1,0 +1,44 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit9_HomeworkPage.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm9 *Form9;
+//---------------------------------------------------------------------------
+__fastcall TForm9::TForm9(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm9::piClick(TObject *Sender)
+{
+    Form9->Close();
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm9::Image4Click(TObject *Sender)
+{
+    String query2 = "select subject_name from subjects;";
+	FDQuery2->SQL->Text = query2;
+	FDQuery2->Active = true;
+
+	if(ListBox2->Items->Count == 0)
+	{
+		if(!FDQuery2->Eof)
+		{
+			FDQuery2->First();
+			do
+			{
+				String one = FDQuery2->Fields->Fields[0]->AsString;
+				ListBox2->Items->Add(one);
+
+				FDQuery2->Next();
+			}while(!FDQuery2->Eof);
+		}
+	}
+}
+//---------------------------------------------------------------------------
+

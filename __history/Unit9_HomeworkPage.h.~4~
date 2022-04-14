@@ -1,0 +1,27 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit9_HomeworkPageH
+#define Unit9_HomeworkPageH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Imaging.jpeg.hpp>
+#include <Vcl.Imaging.pngimage.hpp>
+//---------------------------------------------------------------------------
+class TForm9 : public TForm
+{
+__published:	// IDE-managed Components
+	TImage *Image1;
+	TImage *pi;
+	void __fastcall piClick(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm9(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm9 *Form9;
+//---------------------------------------------------------------------------
+#endif

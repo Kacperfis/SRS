@@ -29,6 +29,11 @@ __published:	// IDE-managed Components
 	void __fastcall Image2Click(TObject *Sender);
 	void __fastcall Image11Click(TObject *Sender);
 	void __fastcall Image3Click(TObject *Sender);
+	void __fastcall Image4Click(TObject *Sender);
+	void __fastcall Image5Click(TObject *Sender);
+	void __fastcall Image6Click(TObject *Sender);
+	void __fastcall Image7Click(TObject *Sender);
+	void __fastcall Image8Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm2(TComponent* Owner);

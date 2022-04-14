@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.989,D:\PROGRAMOWAŃSKO\Register_project\LogonPage.dfm=D:\PROGRAMOWAŃSKO\Register_project\Unit1_LogonPage.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.211,D:\PROGRAMOWAŃSKO\Register_project\Unit1.dfm=D:\PROGRAMOWAŃSKO\Register_project\LogonPage.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.148,D:\PROGRAMOWAŃSKO\Register_project\Unit9_.h=D:\PROGRAMOWAŃSKO\Register_project\Unit9_HomeworkPage.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.580,=D:\PROGRAMOWAŃSKO\Register_project\Unit9.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.858,D:\PROGRAMOWAŃSKO\Register_project\Unit4_MarksPage.h=D:\PROGRAMOWAŃSKO\Register_project\Unit4.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.989,D:\PROGRAMOWAŃSKO\Register_project\LogonPage.h=D:\PROGRAMOWAŃSKO\Register_project\Unit1_LogonPage.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.132,D:\PROGRAMOWAŃSKO\Register_project\Unit2.dfm=D:\PROGRAMOWAŃSKO\Register_project\Unit2_MainPage.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.858,D:\PROGRAMOWAŃSKO\Register_project\Unit4_MarksPage.cpp=D:\PROGRAMOWAŃSKO\Register_project\Unit4.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.899,D:\PROGRAMOWAŃSKO\Register_project\Unit6_AnnouncementsPage.cpp=D:\PROGRAMOWAŃSKO\Register_project\Unit6.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.721,=D:\PROGRAMOWAŃSKO\Register_project\Unit4.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.241,=D:\PROGRAMOWAŃSKO\Register_project\Unit6.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.046,D:\PROGRAMOWAŃSKO\Register_project\Unit3.h=D:\PROGRAMOWAŃSKO\Register_project\Unit3_AdministratorPage.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.840,D:\PROGRAMOWAŃSKO\Register_project\Unit9.cpp=D:\PROGRAMOWAŃSKO\Register_project\Unit9_.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.090,D:\PROGRAMOWAŃSKO\Register_project\Unit8.h=D:\PROGRAMOWAŃSKO\Register_project\Unit8_SchedulePage.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.362,C:\Users\Kacper\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\PROGRAMOWAŃSKO\Register_project\Unit1.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.211,D:\PROGRAMOWAŃSKO\Register_project\Unit1.cpp=D:\PROGRAMOWAŃSKO\Register_project\LogonPage.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.572,=D:\PROGRAMOWAŃSKO\Register_project\Unit5.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.046,D:\PROGRAMOWAŃSKO\Register_project\Unit3.dfm=D:\PROGRAMOWAŃSKO\Register_project\Unit3_AdministratorPage.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.362,C:\Users\Kacper\Documents\Embarcadero\Studio\Projects\Unit1.h=D:\PROGRAMOWAŃSKO\Register_project\Unit1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.132,D:\PROGRAMOWAŃSKO\Register_project\Unit2.h=D:\PROGRAMOWAŃSKO\Register_project\Unit2_MainPage.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.211,D:\PROGRAMOWAŃSKO\Register_project\Unit1.h=D:\PROGRAMOWAŃSKO\Register_project\LogonPage.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.723,D:\PROGRAMOWAŃSKO\Register_project\Unit5_AttendancePage.cpp=D:\PROGRAMOWAŃSKO\Register_project\Unit5.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.514,D:\PROGRAMOWAŃSKO\Register_project\Unit7.h=D:\PROGRAMOWAŃSKO\Register_project\Unit7_MessagingPage.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.090,D:\PROGRAMOWAŃSKO\Register_project\Unit8.dfm=D:\PROGRAMOWAŃSKO\Register_project\Unit8_SchedulePage.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.858,D:\PROGRAMOWAŃSKO\Register_project\Unit4_MarksPage.dfm=D:\PROGRAMOWAŃSKO\Register_project\Unit4.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.148,D:\PROGRAMOWAŃSKO\Register_project\Unit9_.dfm=D:\PROGRAMOWAŃSKO\Register_project\Unit9_HomeworkPage.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.978,=C:\Users\Kacper\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.893,C:\Users\Kacper\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=D:\PROGRAMOWAŃSKO\Register_project\Project1PCH1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.840,D:\PROGRAMOWAŃSKO\Register_project\Unit9.h=D:\PROGRAMOWAŃSKO\Register_project\Unit9_.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.989,D:\PROGRAMOWAŃSKO\Register_project\LogonPage.cpp=D:\PROGRAMOWAŃSKO\Register_project\Unit1_LogonPage.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.514,D:\PROGRAMOWAŃSKO\Register_project\Unit7.cpp=D:\PROGRAMOWAŃSKO\Register_project\Unit7_MessagingPage.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.676,=D:\PROGRAMOWAŃSKO\Register_project\Unit7.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.723,D:\PROGRAMOWAŃSKO\Register_project\Unit5_AttendancePage.dfm=D:\PROGRAMOWAŃSKO\Register_project\Unit5.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.899,D:\PROGRAMOWAŃSKO\Register_project\Unit6_AnnouncementsPage.dfm=D:\PROGRAMOWAŃSKO\Register_project\Unit6.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.153,C:\Users\Kacper\Documents\Embarcadero\Studio\Projects\Project1.cbproj=D:\PROGRAMOWAŃSKO\Register_project\Project1.cbproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.514,D:\PROGRAMOWAŃSKO\Register_project\Unit7.dfm=D:\PROGRAMOWAŃSKO\Register_project\Unit7_MessagingPage.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.924,=D:\PROGRAMOWAŃSKO\Register_project\Unit8.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.090,D:\PROGRAMOWAŃSKO\Register_project\Unit8.cpp=D:\PROGRAMOWAŃSKO\Register_project\Unit8_SchedulePage.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.148,D:\PROGRAMOWAŃSKO\Register_project\Unit9_.cpp=D:\PROGRAMOWAŃSKO\Register_project\Unit9_HomeworkPage.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.046,D:\PROGRAMOWAŃSKO\Register_project\Unit3.cpp=D:\PROGRAMOWAŃSKO\Register_project\Unit3_AdministratorPage.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.723,D:\PROGRAMOWAŃSKO\Register_project\Unit5_AttendancePage.h=D:\PROGRAMOWAŃSKO\Register_project\Unit5.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.322,D:\PROGRAMOWAŃSKO\Register_project\Unit2.cpp=</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.899,D:\PROGRAMOWAŃSKO\Register_project\Unit6_AnnouncementsPage.h=D:\PROGRAMOWAŃSKO\Register_project\Unit6.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.834,=D:\PROGRAMOWAŃSKO\Register_project\Unit3.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.801,=D:\PROGRAMOWAŃSKO\Register_project\Unit3.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.840,D:\PROGRAMOWAŃSKO\Register_project\Unit9.dfm=D:\PROGRAMOWAŃSKO\Register_project\Unit9_.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.288,=C:\Users\Kacper\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.362,C:\Users\Kacper\Documents\Embarcadero\Studio\Projects\Unit1.cpp=D:\PROGRAMOWAŃSKO\Register_project\Unit1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.034,=D:\PROGRAMOWAŃSKO\Register_project\Unit2.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.335,=D:\PROGRAMOWAŃSKO\Register_project\Unit2.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.132,D:\PROGRAMOWAŃSKO\Register_project\Unit2.cpp=D:\PROGRAMOWAŃSKO\Register_project\Unit2_MainPage.cpp</Transaction>
+  </Transactions>
+</BorlandProject>

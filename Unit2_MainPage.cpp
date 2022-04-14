@@ -7,6 +7,11 @@
 #include "Unit1_LogonPage.h"
 #include "Unit3_AdministratorPage.h"
 #include "Unit4_MarksPage.h"
+#include "Unit5_AttendancePage.h"
+#include "Unit6_AnnouncementsPage.h"
+#include "Unit7_MessagingPage.h"
+#include "Unit8_SchedulePage.h"
+#include "Unit9_HomeworkPage.h"
 
 //---------------------------------------------------------------------------
 //<a href='https://www.freepik.com/vectors/background'>Background vector created by starline - www.freepik.com</a>
@@ -46,6 +51,37 @@ void __fastcall TForm2::Image3Click(TObject *Sender)
 {
     Form4->StringGrid1->ColWidths[2] = 450;
     Form4->Visible = true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm2::Image4Click(TObject *Sender)
+{
+	Form5->Visible = true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm2::Image5Click(TObject *Sender)
+{
+    Form6->Visible = true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm2::Image6Click(TObject *Sender)
+{
+    Form7->Visible = true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm2::Image7Click(TObject *Sender)
+{
+	Form8->Visible = true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm2::Image8Click(TObject *Sender)
+{
+	Form9->Visible = true;
+    Form9->StringGrid1->ColWidths[0] = 420;
 }
 //---------------------------------------------------------------------------
 
